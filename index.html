@@ -1,0 +1,208 @@
+<html>
+  <head>
+  <title>It's 4 a.m. - do you know where your session reads are?</title>
+  <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+<article class="deck-container">
+    <section id="title" class="slide title odd one-three deck-current"><h2>It's 4 a.m. - do you know where your session reads are?</h2>
+        <div class='presenter'>
+            <h3>Aaron Jorbin</h3>
+
+            <p><a href="http://aaron.jorb.in">aaron.jorb.in</a></p>
+
+            <p><a href="http://twitter.com/aaronjorbin">@aaronjorbin</a></p>
+        </div>
+        <div class='presenter'>
+            <h3>Drew Stephens</h3>
+
+            <p><a href="http://dinomite.net/">dinomite.net</a></p>
+
+            <p><a href="http://twitter.com/dinomite">@dinomite</a></p>
+        </div>
+    </section>
+
+
+<!-- INTRODUCTION -->
+
+<ul>
+<li><h1>This is a PSA</h1>
+
+<!-- WHY --></li>
+<li><h1>Why do you want metrics?</h1></li>
+<li><h1>How we use metrics</h1></li>
+<li><h1>Planning</h1></li>
+<li><h1>Find Problems</h1></li>
+<li><h1>Even the ones we didn't know we had</h1></li>
+<li><h2>Going Down</h2>
+
+<p><img src="images/something_wrong.png">  </p></li>
+<li><h1>What do you alert on?</h1></li>
+<li><h2>Brainiac Wut</h2>
+
+<p><img src="images/brainiac-wut.png"></p></li>
+</ul>
+
+<!-- STATSD -->
+
+<!--
+StatsD is simple, which is important because, like testing,
+metrics only get done if they're easy to use.
+-->
+
+<ul>
+<li><h2>StatsD</h2>
+
+<h3>Dead simple</h3></li>
+<li><h2>StatsD</h2>
+
+<h3>Dead simple</h3>
+
+<h3>(that's important)</h3></li>
+<li><h2>StatsD</h2>
+
+<h3>Dead simple</h3>
+
+<h3>(that's important)</h3>
+
+<h3>Only counters &amp; timers</h3></li>
+<li><h2>StatsD</h2>
+
+<h3>Dead simple</h3>
+
+<h3>(that's important)</h3>
+
+<h3>Only counters &amp; timers</h3>
+
+<h3>Talks to Graphite</h3></li>
+</ul>
+
+<!--
+Metrics written by Coda Hale at Yammer
+-->
+
+<ul>
+<li><h1>Metrics</h1></li>
+<li><h1>Metrics (proper noun)</h1></li>
+<li><h1>Metrics offers many different metrics</h1></li>
+<li><h2>Gauges</h2>
+
+<p><img src="images/gauge.jpg"></p></li>
+<li><h2>Timers</h2>
+
+<p><img src="images/timer.jpg"></p></li>
+<li><h2>Counter</h2>
+
+<p><img src="images/counter.jpg"></p></li>
+<li><h2>Meter</h2>
+
+<p><img src="images/meter.jpg"></p></li>
+<li><h2>Histogram</h2>
+
+<p><img src="images/histogram.jpg"></p></li>
+<li><h1>How do I count things across requests?</h1>
+
+<!-- How it all works flowchart --></li>
+<li><h2>Metrics from top to bottom</h2>
+
+<p><img src="images/flowchart.png"></p></li>
+</ul>
+
+<!-- PHETRIC -->
+
+<ul>
+<li><h2>Setup Phetric</h2>
+
+<h3>Phetric_Sender::init( 'localhost', '1420', $prepend );</h3></li>
+<li><h1>$prepend = $app . $env;</h1></li>
+<li><h2>All at once or as they come?</h2>
+
+<h3>Autoflush paramater will send metrics immediately</h3>
+
+<h3>Useful for long running scripts</h3></li>
+</ul>
+
+<!-- METRIC CATCHER -->
+
+<ul>
+<li><h2>MetricCatcher</h2>
+
+<h3>Access to everything in Metrics</h3>
+
+<h3>Handles persistence</h3>
+
+<h3>Listens for JSON</h3>
+
+<h3>Talks to Ganglia and Graphite</h3></li>
+<li><h2>JSON format</h2>
+
+<pre><code>{
+    "name":"server.application.section.metric_name",
+    "value":7,
+    "type":"meter",
+    "timestamp":unix_time.millis
+}
+</code></pre></li>
+</ul>
+
+<!-- GANGLIA -->
+
+<ul>
+<li><h2>Ganglia</h2>
+
+<h3>Drew, explain this</h3></li>
+<li><h2>Cluster Overview</h2>
+
+<p><img src="images/cluster overview.png"></p></li>
+<li><h2>Machine Overview</h2>
+
+<p><img src="images/apw00 overview.png"></p></li>
+<li><h2>Metric Drilldown</h2>
+
+<p><img src="images/adm0d cpu drilldown.png"></p></li>
+</ul>
+
+<!-- GRAPHITE -->
+
+<ul>
+<li><h1>You use Graphite, too?</h1></li>
+<li><h2>GB9k</h2>
+
+<p><img src="images/GB9k.jpg"></p></li>
+</ul>
+
+<!-- EXISTING ISSUES -->
+
+<ul>
+<li><h1>What should I graph?</h1></li>
+<li><h1>Changing time periods</h1></li>
+<li><h1>Drilldown to specific machines</h1></li>
+<li><h1>Questions?</h1>
+
+<div class='presenter'>
+    <h3>Aaron Jorbin</h3>
+    <p><a href="http://aaron.jorb.in">aaron.jorb.in</a></p>
+    <p><a href="http://twitter.com/aaronjorbin">@aaronjorbin</a></p>
+</div>
+
+<div class='presenter'>
+    <h3>Drew Stephens</h3>
+    <p><a href="http://dinomite.net/">dinomite.net</a></p>
+    <p><a href="http://twitter.com/dinomite">@dinomite</a></p>
+</div>
+
+<p><div id="joinus">
+    <h3>Clearspring is hiring</h3>
+    <a href="http://clearspring.com/jobs">http://clearspring.com/jobs</a>
+<div></p></li>
+</ul></article>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+<script defer src="/js/slides.js"></script>
+<script>
+var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
