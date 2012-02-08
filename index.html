@@ -121,6 +121,16 @@ Metrics written by Coda Hale at Yammer
 <h3>Autoflush paramater will send metrics immediately</h3>
 
 <h3>Useful for long running scripts</h3></li>
+
+<li><h2>JSON format</h2>
+
+<pre><code>{
+    "name":"server.application.section.metric_name",
+    "value":7,
+    "type":"meter",
+    "timestamp":unix_time.millis
+}
+</code></pre></li>
 </ul>
 
 <!-- METRIC CATCHER -->
@@ -135,15 +145,6 @@ Metrics written by Coda Hale at Yammer
 <h3>Listens for JSON</h3>
 
 <h3>Talks to Ganglia and Graphite</h3></li>
-<li><h2>JSON format</h2>
-
-<pre><code>{
-    "name":"server.application.section.metric_name",
-    "value":7,
-    "type":"meter",
-    "timestamp":unix_time.millis
-}
-</code></pre></li>
 </ul>
 
 <!-- GANGLIA -->
